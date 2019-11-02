@@ -10,6 +10,7 @@
     height: 70px;
     background-color: #fff;
     box-shadow: 0px 3px 6px #00000029;
+    position: absolute;
 }
 .header__container {
     display: flex;
@@ -47,4 +48,50 @@
     border-bottom: 4px solid #08A6E4;
     padding: 29px 12px 26px 12px;
     cursor: pointer;
+}
+.hero {
+    height: 100vh;
+    background: url(../assets/Background.png) no-repeat bottom -79px center;
+    background-size: auto 56vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main {
+    position: relative;
+    top: 208px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 49px;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+.hero__btn {
+    background-color:#08A6E4;
+    color: #fff;
+    box-shadow: 5px 10px 14px #07ACE629;
+}
+.btn {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding: 22px 157px;
+    border-radius: 40px;
+    margin-top: 38px;
+}
+.popular {
+    display: flex;
+    flex-direction: column;
+}
+.popular__title {
+    font-size: 36px;
 }
