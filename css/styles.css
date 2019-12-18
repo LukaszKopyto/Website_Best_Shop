@@ -11,6 +11,7 @@
     background-color: #fff;
     box-shadow: 0px 3px 6px #00000029;
     position: absolute;
+    display: flex;
 }
 .header__container {
     display: flex;
@@ -32,22 +33,27 @@
     justify-content: space-between;
 }
 .header__items {
+    width: 80px;
+    margin-right: 95px;
+}
+.header__items a {
     font-family: 'Open Sans', sans-serif;
     font-size: 11px;
     color: #A5A5A5;
     text-transform: uppercase;
-    margin-right: 95px;
-    padding: 29px 12px 26px 12px;
+    padding: 29px 12px 23px 12px;
     border-bottom: 4px solid #fff;
+    text-decoration: none;
 }
 .header__items:nth-child(4) {
     margin-right: 0;
 }
-.header__items:hover {
+.header__items a:hover {
     color: #000;
     border-bottom: 4px solid #08A6E4;
-    padding: 29px 12px 26px 12px;
+    padding: 29px 12px 23px 12px;
     cursor: pointer;
+    font-weight: 600;
 }
 .hero {
     height: 100vh;
