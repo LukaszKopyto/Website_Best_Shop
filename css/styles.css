@@ -17,12 +17,12 @@
     justify-content: space-between;
     align-items: center;
 }
-.header__logo {
+.header__logo, .footer__logo {
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
     margin: auto 0;
 }
-.header__logo a {
+.header__logo a, .footer__logo a {
     text-decoration: none;
     color: #08A6E4;
     cursor: pointer;
@@ -101,7 +101,7 @@ main {
     margin: 0 114px;
     padding-bottom: 121px;
 }
-.popular__title, .info__title {
+.popular__title, .info__title, .pricing__title {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 36px;
@@ -267,4 +267,277 @@ main {
 }
 .info__box--square .info__img {
     left: 62px;
+}
+.pricing {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pricing__title {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 40px 0;
+
+}
+.pricing__boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.pricing__boxes--container {
+    width: 1266px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.pricing__box {
+    border: 1px solid rgb(175, 74, 74);
+    width: 372px;
+    height: 461px;
+    border-radius: 18px;
+    position: relative;
+}
+.pricing__box--basic {
+    border: 1px solid #FB3B64;
+}
+.pricing__box--premium {
+    border: 1px solid #55DFB4;
+}
+.pricing__box--premium .pricing__box__value {
+    color: #55DFB4;
+}
+.pricing__box--professional .pricing__box__value {
+    color: #07ACE6;
+}
+.pricing__box--professional .pricing__box__plan {
+    font-size: 21px;
+}
+.pricing__box--basic span.btn {
+    background-color: #FB3B64;
+}
+.pricing__box--premium span.btn {
+    background-color: #55DFB4;
+}
+.pricing__box--professional span.btn.professional {
+    background-color: #07ACE6;
+    top: 473px;
+}
+.pricing__box span.btn {
+    display: block;
+    width: 150px;
+    height: 50px;
+    border-radius: 23px;
+    color: #fff;
+    position: absolute;
+    top: 436px;
+    left: 111px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    padding: 19px;
+    margin-top: 0;
+}
+.pricing__box--professional {
+    border: 1px solid #07ACE6;
+    width: 405px;
+    height: 500px;
+    box-shadow: 5px 10px 27px #07ACE629;
+}
+.pricing__box__plan {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    padding: 38px;
+}
+.pricing__box__value {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 46px;
+    font-weight: 100;
+    color: #FB3B64;
+    text-align: center;
+    padding: 14px 0 69px;
+}
+.pricing__box__value span.tagline {
+    font-family:'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #13253B;
+    display: block;
+    padding-top: 7px;
+}
+.pricing__box__feature {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 20px;
+    position: relative;
+    width: auto;
+}
+.pricing__box__feature img{
+    border: 1px solid #55DFB4;
+    height: 10px;
+    width: 10px;
+    left: -10px;
+    position: relative;
+}
+.uncheck {
+    color: #FB3B64;
+    font-size: 8px;
+    border: 1px solid #FB3B64;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 159px;
+    margin-bottom: 59px;
+}
+.contact__box {
+    width: 896px;
+    height: 372px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer {
+    box-shadow: 0px -5px 40px #00000029;
+}
+.footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 89px;
+}
+.contact__h2 {
+    font-family: "Raleway",  sans-serif;
+    font-weight: 400;
+    font-size: 49px;
+    padding-bottom: 22px;
+}
+.contact__info {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+.contact__details {
+    color: #A5A5A5;
+    margin-top: 42px;
+}
+.contact__phone {
+    padding-left: 24px;
+    position: relative;
+    display: inline-block;
+}
+.contact__mail {
+    position: relative;
+    padding: 0 30px;
+    display: inline-block;
+}
+.contact__phone::before {
+    content: "";
+    display: block;
+    height: 27px;
+    width: 27px;
+    background-image: url(../assets/Phone\ Icon.svg);
+    position: absolute;
+    top: -5px;
+    left: -4px;
+}
+.contact__mail::before {
+    content: "";
+    display: block;
+    height: 27px;
+    width: 27px;
+    background-image: url(../assets/Mail\ Icon.svg);
+    position: absolute;
+    top: -5px;
+    left: -8px;
+}
+.contact__form {
+    width: 440px;
+}
+.form__group {
+    display: flex;
+    flex-direction: column;
+}
+.form__label {
+    font-family:'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    color: #08A6E4;
+    text-transform: uppercase;
+    letter-spacing: 3.28px;
+}
+.form__label[for="email"] {
+    margin-top: 42px;
+}
+.form__input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #95989A;
+    height: 42px;
+}
+.form__checkbox {
+    display: flex;
+    margin-top: 30px;
+}
+.form__checkbox input[type=checkbox]  {
+    -webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+	padding: 8px;
+	border-radius: 4px;
+	display: inline-block;
+    position: relative;
+    cursor: pointer;
+    height: 15px;
+    margin-right: 10px;
+}
+.form__checkbox input[type=checkbox]:checked:after {
+	content: url(../assets/Checkmark.svg);
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #99a1a7;
+}
+.checkbox__label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 17px;
+    color: #707070;
+}
+.form__btn {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #07ACE6;
+    padding: 20px 97px;
+    border-radius: 35px;
+    margin: 20px 0 0 213px;
+}
+.footer__logo {
+    font-size: 26px;
+    font-weight: 300;
+}
+.footer__copyright {
+    color: #A5A5A5;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    margin-top: 6px;
+}
+.footer__social img {
+    height: 24px;
+    width: 24px;
+    margin-left: 20px;
 }

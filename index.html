@@ -118,9 +118,78 @@
       </article>
     </div>
   </section>
-  <section></section>
-  <section></section>
-  <footer></footer>
+  <section class="pricing">
+    <h3 class="pricing__title">Pricing</h3>
+    <div class="pricing__boxes pricing__boxes--container">
+      <div class="pricing__box pricing__box--basic">
+        <div class="pricing__box__plan">Basic</div>
+        <div class="pricing__box__value">$0</div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">100 MB HDD</div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">1 Subdomain</div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">2 E-mails</div>
+        <div class="pricing__box__feature"><span class="uncheck">x</span> Two years license</div>
+        <div class="pricing__box__feature"><span class="uncheck">x</span> Full support</div>
+        <span class="btn">Begin</span>
+      </div>
+      <div class="pricing__box pricing__box--professional">
+        <div class="pricing__box__plan">Professional</div>
+        <div class="pricing__box__value">$25 <span class="tagline">Limited offer</span> </div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">500 MB HDD</div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">2 Subdomain</div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">5 E-mails</div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg"> Two years license</div>
+        <div class="pricing__box__feature"><span class="uncheck">x</span> Full support</div>
+        <span class="btn professional">Begin</span>
+      </div>
+      <div class="pricing__box pricing__box--premium">
+        <div class="pricing__box__plan">Premium</div>
+        <div class="pricing__box__value">$60 <span class="tagline">Limited offer</span> </div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">2 GB HDD</div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">5 Subdomain</div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">20 E-mails</div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg"> Two years license</div>
+        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg"> Full support</div>
+        <span class="btn">Begin</span>
+      </div>
+    </div>
+  </section>
+  <section class="contact container">
+    <div class="contact__box">
+      <div class="contact__info">
+        <h2 class="contact__h2">Any questions?</h2>
+        <p>Leave your email address or call us!</p>
+        <p class=contact__details><span class="contact__mail">info@bestshop.xyz</span>
+          <span class="contact__phone">123 456 789</span></p>
+      </div>
+      <div class="contact__form">
+        <div class="form__group">
+          <label for="name" class="form__label">Name</label>
+          <input type="text" name="name" id="form__name" class="form__input">
+        </div>
+        <div class="form__group">
+          <label for="email" class="form__label">Email</label>
+          <input type="text" name="email" id="form__email" class="form__input">
+        </div>
+        <div class="form__checkbox">
+          <input class="checkbox__input" type="checkbox" name="check" required="required" aria-required="true" id="form__check">
+          <label for="check" class="checkbox__label">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+        </div>
+        <button class="form__btn" name="submit" value="submit" type="submit">Send</button>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__logo">
+        <a href="#">BestShop</a>
+        <div class="footer__copyright">© 2019 BestShop LTD, All Rights Reserved</div>
+      </div>
+      <div class="footer__social">
+        <a href="https://twitter.com/"><img src="./assets/Twitter.svg" alt="BestShop Twitter"></a>
+        <a href="https://www.facebook.com/"><img src="./assets/Facebook.svg" alt="BestShop Facebook"></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
