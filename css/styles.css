@@ -1,5 +1,8 @@
-* {
+*, *:after, *:before {
     box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 .container {
     width: 1352px;
@@ -41,7 +44,7 @@
     font-size: 11px;
     color: #A5A5A5;
     text-transform: uppercase;
-    padding: 29px 12px 23px 12px;
+    padding: 29px 12px 22px 12px;
     border-bottom: 4px solid #fff;
     text-decoration: none;
 }
@@ -86,6 +89,10 @@ main {
     color: #fff;
     box-shadow: 5px 10px 14px #07ACE629;
 }
+.hero__btn:hover {
+    box-shadow: 5px 10px 14px rgba(3, 85, 116, 0.25);
+    background-color:rgb(9, 145, 224);
+}
 .btn {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
@@ -107,7 +114,7 @@ main {
     margin: 0 114px;
     padding-bottom: 121px;
 }
-.popular__title, .info__title, .pricing__title {
+.popular__title, .info__title, .pricing__title, .calculate__title {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 36px;
@@ -493,7 +500,11 @@ main {
     display: flex;
     margin-top: 30px;
 }
-.form__checkbox input[type=checkbox]  {
+.calculate__checkbox {
+    display: flex;
+    margin-bottom: 20px;
+}
+.form__checkbox input[type=checkbox], .calculate__checkbox input[type=checkbox]  {
     -webkit-appearance: none;
 	background-color: #fafafa;
 	border: 1px solid #cacece;
@@ -506,20 +517,36 @@ main {
     height: 15px;
     margin-right: 10px;
 }
-.form__checkbox input[type=checkbox]:checked:after {
+.calculate__checkbox input[type=checkbox] {
+    width: 24px;
+    height: 24px;
+}
+.form__checkbox input[type=checkbox]:checked:after, .calculate__checkbox input[type=checkbox]:checked:after {
 	content: url(../assets/Checkmark.svg);
 	font-size: 14px;
 	position: absolute;
 	top: 0px;
 	left: 3px;
-	color: #99a1a7;
 }
-.checkbox__label {
+.calculate__checkbox input[type=checkbox]:checked:after {
+    top: 2px;
+    left: 5px;
+}
+.calculate__checkbox input[type=checkbox]:hover {
+    background-color: rgb(204, 208, 211);
+}
+.checkbox__label, .checkbox__label--calculate {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 12px;
     line-height: 17px;
     color: #707070;
+}
+.checkbox__label--calculate {
+    line-height: 28px;
+}
+.checkbox__label--calculate:hover {
+    cursor: pointer;
 }
 .form__btn {
     font-family: 'Open Sans', sans-serif;
@@ -546,4 +573,162 @@ main {
     height: 24px;
     width: 24px;
     margin-left: 20px;
+}
+.calculate {
+    background: #F7F7F7;
+    width: 100vw;
+    height: 100vh;
+}
+.calculate__title {
+    text-align: center;
+    display: block;
+    padding-top: 93px;
+}
+.calculate__form {
+    display: flex;
+    justify-content: center;
+    padding-top: 52px;
+}
+.calculate__input--box {
+    width: 440px;
+    margin-right: 47px;
+}
+.calculate__input {
+    height: 40px;
+    width: 440px;
+    color: #A5A5A5;
+    box-shadow: 0px 3px 6px #08A6E429;
+    border: 1px solid #08A6E4;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 6px 20px;
+    font-size: 13px;
+    font-weight: 100;
+}
+::placeholder, option {
+    color: #A5A5A5;
+}
+.calculate__result {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 100;
+    width: 385px;
+}
+.calculate__product--price, .calculate__orders--price, .calculate__accounting--price, .calculate__terminal--price, .calculate__package--price {
+    font-size: 18px;
+    font-weight: 700;
+}
+.calculate__total--name {
+    font-size: 14px;
+    font-weight: 100;
+}
+.calculate__total--price {
+    font-size: 20px;
+    font-weight: 700;
+}
+.summary__box {
+    background-color: #55DFB4;
+    border-radius: 6px;
+    height: 31px;
+    width: 385px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 20px;
+    margin-bottom: 8px;
+    box-shadow: 0px 3px 6px #00000029;
+}
+.calculate__total {
+    background-color: #08A6E4;
+    color: #ffffff;
+    border-radius: 6px;
+    height: 38px;
+    width: 179px;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-top: 14px;
+    padding: 6px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin-top: auto;
+}
+.hide {
+    display: none;
+}
+.calculate__select--wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+}
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+}
+.custom-select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.custom-select__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    cursor: pointer;
+}
+.custom-options {
+    position: absolute;
+    display: block;
+    top: 130%;
+    left: 0;
+    right: 0;
+    border: 1px solid #EB476E;
+    border-radius: 6px;
+    background: #fff;
+    transition: all 0.7s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+.custom-select.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.custom-option {
+    position: relative;
+    display: block;
+    padding: 0 22px 0 22px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #000;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.custom-option:hover {
+    cursor: pointer;
+    background-color: #EB476E;
+    color: #fff;
+}
+.custom-option.selected {
+    color: #ffffff;
+    background-color: #EB476E;
+}
+.arrow {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    content: url(../assets/Arrow.svg);
+    transition: all 1.2s;
+}
+.arrow-rotate {
+    transform: rotate(180deg);
+    transition: all 1.2s;
 }
