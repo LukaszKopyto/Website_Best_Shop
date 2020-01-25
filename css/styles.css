@@ -732,3 +732,10 @@ main {
     transform: rotate(180deg);
     transition: all 1.2s;
 }
+.calculate__product--name, .calculate__orders--name, .calculate__package--name {
+    width: 20%;
+}
+.calculate__product--price, .calculate__orders--price, .calculate__package--price {
+    width: 20%;
+    text-align: right;
+}
