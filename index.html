@@ -6,8 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="ie=edge" http-equiv="X-UA-Compatible" />
   <title>BestShop - Sell More!</title>
-  <link href="./css/reset.css" rel="stylesheet" />
-  <link href="./css/styles.css" rel="stylesheet" />
+  <!-- <link href="./css/reset.css" rel="stylesheet" /> -->
+  <link href="./css/main.css" rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,800&display=swap&subset=latin-ext"
     rel="stylesheet" />
@@ -20,8 +20,13 @@
         <a href="#">BestShop</a>
       </div>
       <nav class="header__nav">
+        <button class="hamburger" aria-label="Menu">
+          <span class="hamburger__container" tabindex="-1">
+              <span class="hamburger__bars"></span>
+          </span>
+        </button>
         <ul class="header__list">
-          <li class="header__items"><a href="#" title="Why us">Why us</a></li>
+          <li class="header__items active"><a href="#" title="Why us">Why us</a></li>
           <li class="header__items"><a href="#" title="Benefits">Benefits</a></li>
           <li class="header__items"><a href="#" title="Prices">Prices</a></li>
           <li class="header__items"><a href="#" title="Contact">Contact</a></li>
@@ -30,7 +35,7 @@
     </div>
   </header>
   <section class="hero">
-    <main>
+    <main class="container">
       <h1 class="hero__title">Sell More!</h1>
       <p>Open shop on our platform and increase your sales</p>
       <a class="btn hero__btn" href="#">Open your shop</a>
@@ -122,33 +127,45 @@
     <h3 class="pricing__title">Pricing</h3>
     <div class="pricing__boxes pricing__boxes--container">
       <div class="pricing__box pricing__box--basic">
-        <div class="pricing__box__plan">Basic</div>
-        <div class="pricing__box__value">$0</div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">100 MB HDD</div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">1 Subdomain</div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">2 E-mails</div>
-        <div class="pricing__box__feature"><span class="uncheck">x</span> Two years license</div>
-        <div class="pricing__box__feature"><span class="uncheck">x</span> Full support</div>
+        <div class="pricing__plan">
+          <div class="pricing__box__plan">Basic</div>
+          <div class="pricing__box__value">$0</div>
+        </div>
+        <div class="pricing__feature">
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">100 MB HDD</div>
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">1 Subdomain</div>
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">2 E-mails</div>
+          <div class="pricing__box__feature"><span class="uncheck">x</span> Two years license</div>
+          <div class="pricing__box__feature"><span class="uncheck">x</span> Full support</div>
+        </div>
         <span class="btn">Begin</span>
       </div>
       <div class="pricing__box pricing__box--professional">
-        <div class="pricing__box__plan">Professional</div>
-        <div class="pricing__box__value">$25 <span class="tagline">Limited offer</span> </div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">500 MB HDD</div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">2 Subdomain</div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">5 E-mails</div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg"> Two years license</div>
-        <div class="pricing__box__feature"><span class="uncheck">x</span> Full support</div>
+        <div class="pricing__plan">
+          <div class="pricing__box__plan">Professional</div>
+          <div class="pricing__box__value">$25 <span class="tagline">Limited offer</span> </div>
+        </div>
+        <div class="pricing__feature">
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">500 MB HDD</div>
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">2 Subdomain</div>
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">5 E-mails</div>
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg"> Two years license</div>
+          <div class="pricing__box__feature"><span class="uncheck">x</span> Full support</div>
+        </div>
         <span class="btn professional">Begin</span>
       </div>
       <div class="pricing__box pricing__box--premium">
-        <div class="pricing__box__plan">Premium</div>
-        <div class="pricing__box__value">$60 <span class="tagline">Limited offer</span> </div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">2 GB HDD</div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">5 Subdomain</div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">20 E-mails</div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg"> Two years license</div>
-        <div class="pricing__box__feature"><img src="./assets/Checkmark.svg"> Full support</div>
+        <div class="pricing__plan">
+          <div class="pricing__box__plan">Premium</div>
+          <div class="pricing__box__value">$60 <span class="tagline">Limited offer</span> </div>
+        </div>
+        <div class="pricing__feature">
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">2 GB HDD</div>
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">5 Subdomain</div>
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg">20 E-mails</div>
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg"> Two years license</div>
+          <div class="pricing__box__feature"><img src="./assets/Checkmark.svg"> Full support</div>
+        </div>
         <span class="btn">Begin</span>
       </div>
     </div>
@@ -190,6 +207,7 @@
       </div>
     </div>
   </footer>
+ <script src="./js/app.js"></script>
 </body>
 
 </html>

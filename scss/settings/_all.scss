@@ -1,0 +1,16 @@
+%logo {
+  font-family: $secondary-font;
+    font-size: 32px;
+    margin: auto 0;
+}
+%logo__link {
+  text-decoration: none;
+  color: $main-color;
+  cursor: pointer;
+}
+%title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+}

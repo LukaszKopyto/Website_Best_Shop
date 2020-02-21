@@ -1,3 +1,10 @@
+const menu = document.querySelector('.hamburger');
+const menuList = document.querySelector('.header__list');
+menu.addEventListener('click', () => {
+  menu.classList.toggle('hamburger--active');
+  (menuList.style.top === '77px') ? menuList.style.top = '-230px' : menuList.style.top = '77px';
+}
+);
 document.querySelector(".custom-select-wrapper").addEventListener("click", function () {
     this.querySelector(".custom-select").classList.toggle("open");
     this.querySelector(".arrow").classList.toggle("arrow-rotate");
