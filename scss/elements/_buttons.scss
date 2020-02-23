@@ -9,6 +9,7 @@
   border-radius: 40px;
   margin-top: 38px;
   width: 100%;
+  cursor: pointer;
 }
 .hero__btn {
   background-color:#08A6E4;
@@ -17,7 +18,23 @@
 }
 .hero__btn:hover {
   box-shadow: 5px 10px 14px rgba(3, 85, 116, 0.25);
-  background-color:rgb(9, 145, 224);
+  // background-color:rgb(9, 145, 224);
+  background-color: adjust-hue($color: $main-color, $degrees: 7);
+}
+.form__btn {
+  font-family: $primary-font;
+  font-size: 13px;
+  font-weight: 600;
+  color: $bg;
+  background-color: $main-color;
+  padding: 20px 97px;
+  border-radius: 35px;
+  margin: 20px 0px 44px;
+  border: 0px;
+  cursor: pointer;
+}
+.form__btn:hover {
+  background-color: adjust-hue($color: $main-color, $degrees: 7);
 }
 .hamburger {
   margin: 0;

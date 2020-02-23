@@ -1,3 +1,4 @@
+@import "../../icons/sass-inline-svg";
 *, *:after, *:before {
   box-sizing: border-box;
 }
@@ -9,6 +10,8 @@ body {
 }
 .header__logo, .footer__logo {
   @extend %logo;
+  font-size: 26px;
+  font-weight: 300;
 }
 .header__logo a, .footer__logo a {
   @extend %logo__link;
@@ -95,7 +98,7 @@ main {
 }
 .popular__container {
   margin-top: 100px;
-  margin: 0 114px;
+  margin: 100px 114px 0;
   padding-bottom: 121px;
 }
 .popular__title {
@@ -171,6 +174,8 @@ main {
   justify-content: space-between;
   padding: 21px;
   position: relative;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
 }
 .info__box:nth-child(3) {
   background-color: $bg;
@@ -207,6 +212,7 @@ main {
   font-family: $primary-font;
   font-size: 0.875rem;
   line-height: 1.1875rem;
+  font-weight: 300;
 }
 .info__imgBox {
   position: relative;
@@ -290,6 +296,7 @@ main {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   margin-bottom: 55px;
 }
 .pricing__plan {
@@ -313,11 +320,20 @@ main {
 .pricing__box--basic span.btn {
   background-color: $second-color;
 }
+.pricing__box--basic span.btn:hover {
+  background-color: darken($color: $second-color, $amount: 15);
+}
 .pricing__box--premium span.btn {
   background-color: $third-color;
 }
+.pricing__box--premium span.btn:hover {
+  background-color: darken($color: $third-color, $amount: 15);
+}
 .pricing__box--professional span.btn.professional {
   background-color: $main-color;
+}
+.pricing__box--professional span.btn.professional:hover {
+  background-color: adjust-hue($color: $main-color, $degrees: 7);
 }
 .pricing__box span.btn {
   display: block;
@@ -327,7 +343,6 @@ main {
   color: #fff;
   position: absolute;
   bottom: -25px;
-  transform: translate(100%);
   text-align: center;
   font-family: $primary-font;
   font-size: 13px;
@@ -387,4 +402,200 @@ main {
   display: inline-block;
   position: relative;
   top: -1px;
+  left: -10px;
+}
+.contact__h2 {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  padding-bottom: 10px;
+}
+.contact__info {
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 300;
+}
+.contact__details {
+  color: #A5A5A5;
+  margin-top: 42px;
+  display: flex;
+  flex-direction: column;
+}
+.contact__phone {
+  padding: 0 0 56px 24px;
+  position: relative;
+  display: inline-block;
+}
+.contact__mail {
+  position: relative;
+  padding: 0 30px 17px;
+  display: inline-block;
+}
+.contact__phone::before {
+  content: "";
+  display: block;
+  height: 27px;
+  width: 27px;
+  background-image: url(../assets/PhoneIcon.svg);
+  position: absolute;
+  top: -5px;
+  left: -4px;
+}
+.contact__mail::before {
+  content: "";
+  display: block;
+  height: 27px;
+  width: 27px;
+  background-image: url(../assets/MailIcon.svg);
+  position: absolute;
+  top: -5px;
+  left: -8px;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form__label {
+  font-family:$primary-font;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  color: $main-color;
+  text-transform: uppercase;
+  letter-spacing: 3.28px;
+}
+.form__label[for="email"] {
+  margin-top: 42px;
+}
+.form__input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #95989A;
+  height: 42px;
+}
+.form__checkbox {
+  display: flex;
+  margin-top: 30px;
+}
+.calculate__checkbox {
+  display: flex;
+  margin-bottom: 20px;
+}
+.form__checkbox input[type=checkbox], .calculate__checkbox input[type=checkbox]  {
+  -webkit-appearance: none;
+background-color: #fafafa;
+border: 1px solid #cacece;
+box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+padding: 8px;
+border-radius: 4px;
+display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 15px;
+  margin-right: 10px;
+}
+.calculate__checkbox input[type=checkbox] {
+  width: 24px;
+  height: 24px;
+}
+.form__checkbox input[type=checkbox]:checked:after, .calculate__checkbox input[type=checkbox]:checked:after {
+content: url(../assets/Checkmark.svg);
+font-size: 14px;
+position: absolute;
+top: 0px;
+left: 3px;
+}
+.calculate__checkbox input[type=checkbox]:checked:after {
+  top: 2px;
+  left: 5px;
+}
+.calculate__checkbox input[type=checkbox]:hover {
+  background-color: $darker-bg;
+}
+.checkbox__label, .checkbox__label--calculate {
+  font-family: $primary-font;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+  color: #707070;
+}
+.checkbox__label--calculate {
+  line-height: 28px;
+}
+.checkbox__label--calculate:hover {
+  cursor: pointer;
+}
+.footer {
+  box-shadow: 0px -5px 40px #00000029;
+}
+.footer__copyright {
+  font-family: $primary-font;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 15px;
+  color: #A5A5A5;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89px;
+}
+@media (max-height: 414px) {
+  .popular__container {
+    margin: 0;
+    padding: 20px 0 60px;
+    width: 100%;
+  }
+}
+@media (orientation: landscape) {
+  main {
+    top: 80px;
+  }
+  .popular__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px 0 60px;
+    width: 100%;
+  }
+  .info__box {
+    flex-direction: row-reverse;
+  }
+  .info__box:nth-child(2) {
+    flex-direction: row;
+  }
+  .info__underline::before {
+    content: "";
+    height: 4px;
+    width: 75%;
+    display: block;
+    margin-top: 40px;
+    border-radius: 3px;
+  }
+  .info__txt {
+    width: 50%;
+  }
+  .info__box--circle .info__img {
+    height: 200px;
+  }
+  .info__box--circle::before {
+    height: 180px;
+    width: 180px;
+  }
+  .info__box--rhombus .info__img {
+    height: 130px;
+  }
+  .info__box--rhombus::before {
+    height: 110px;
+    width: 110px;
+  }
 }
