@@ -21,6 +21,7 @@ body {
   align-items: center;
   max-width: 1266px;
   margin: 16px auto 0 auto;
+  padding: 0 17px;
 }
 .header {
   width: 100vw;
@@ -417,7 +418,7 @@ main {
 .contact__h2 {
   font-family: $secondary-font;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 49px;
   line-height: 47px;
   padding-bottom: 10px;
 }
@@ -560,6 +561,7 @@ left: 3px;
   height: 89px;
   max-width: 1266px;
   margin: 0 auto;
+  padding: 0 17px;
 }
 @media (max-height: 414px) {
   .popular__container {
@@ -667,6 +669,9 @@ left: 3px;
   }
 }
 @media (min-width: 999px) {
+  .popular__container {
+    max-width: 1100px;
+  }
   .info__box--circle .info__img {
     height: 328px;
   }
@@ -700,8 +705,12 @@ left: 3px;
     flex-direction: row;
     justify-content: space-between;
   }
+  .pricing__title {
+    padding:100px 0 50px;
+  }
   .pricing__boxes--container {
-    min-width: 999px;
+    min-width: 1266px;
+    padding: 0 15px 150px;
   }
   .pricing__box {
     width: 30%;
