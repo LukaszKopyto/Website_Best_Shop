@@ -1,8 +1,9 @@
+
 const menu = document.querySelector('.hamburger');
 const menuList = document.querySelector('.header__list');
 menu.addEventListener('click', () => {
   menu.classList.toggle('hamburger--active');
-  (menuList.style.top === '77px') ? menuList.style.top = '-230px' : menuList.style.top = '77px';
+  menuList.classList.toggle('hide');
 }
 );
 document.querySelector(".custom-select-wrapper").addEventListener("click", function () {

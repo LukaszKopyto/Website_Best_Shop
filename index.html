@@ -25,11 +25,11 @@
               <span class="hamburger__bars"></span>
           </span>
         </button>
-        <ul class="header__list">
-          <li class="header__items active"><a href="#" title="Why us">Why us</a></li>
-          <li class="header__items"><a href="#" title="Benefits">Benefits</a></li>
-          <li class="header__items"><a href="#" title="Prices">Prices</a></li>
-          <li class="header__items"><a href="#" title="Contact">Contact</a></li>
+        <ul class="header__list hide">
+          <li class="header__items active"><a href="#popular" title="Why us">Why us</a></li>
+          <li class="header__items"><a href="#info" title="Benefits">Benefits</a></li>
+          <li class="header__items"><a href="#pricing" title="Prices">Prices</a></li>
+          <li class="header__items"><a href="#contact" title="Contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -41,7 +41,7 @@
       <a class="btn hero__btn" href="#">Open your shop</a>
     </main>
   </section>
-  <section class="popular container">
+  <section class="popular container" id="popular">
     <h2 class="popular__title">The most popular sales platform in country</h2>
     <div class="popular__container">
       <article class="popular__article">
@@ -67,7 +67,7 @@
       </article>
     </div>
   </section>
-  <section class="info">
+  <section class="info" id="info">
     <div class="container">
       <article class="info__box">
         <div class="info__txt">
@@ -123,7 +123,7 @@
       </article>
     </div>
   </section>
-  <section class="pricing">
+  <section class="pricing" id="pricing">
     <h3 class="pricing__title">Pricing</h3>
     <div class="pricing__boxes pricing__boxes--container">
       <div class="pricing__box pricing__box--basic">
@@ -170,13 +170,13 @@
       </div>
     </div>
   </section>
-  <section class="contact container">
+  <section class="contact container" id="contact">
     <div class="contact__box">
       <div class="contact__info">
         <h2 class="contact__h2">Any questions?</h2>
         <p>Leave your email address or call us!</p>
-        <p class=contact__details><span class="contact__mail">info@bestshop.xyz</span>
-          <span class="contact__phone">123 456 789</span></p>
+        <p class=contact__details><span class="contact__mail"> <a href="mailto:example@example.com"> info@bestshop.xyz</a></span>
+          <span class="contact__phone"> <a href="tel:+123456789"> 123 456 789</a></span></p>
       </div>
       <div class="contact__form">
         <div class="form__group">
@@ -202,8 +202,8 @@
         <div class="footer__copyright">© 2019 BestShop LTD, All Rights Reserved</div>
       </div>
       <div class="footer__social">
-        <a href="https://twitter.com/"><img src="./assets/Twitter.svg" alt="BestShop Twitter"></a>
-        <a href="https://www.facebook.com/"><img src="./assets/Facebook.svg" alt="BestShop Facebook"></a>
+        <a href="https://twitter.com/" target="_blank"><img src="./assets/Twitter.svg" alt="BestShop Twitter"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="./assets/Facebook.svg" alt="BestShop Facebook"></a>
       </div>
     </div>
   </footer>
