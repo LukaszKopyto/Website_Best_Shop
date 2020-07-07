@@ -3,8 +3,11 @@ const menuList = document.querySelector('.header__list')
 const select = document.querySelector('.custom-select')
 const customSelect = document.querySelector('.custom-select-wrapper')
 const calculateInput = document.querySelector('.calculate__input--box')
+const packageOption = calculateInput.querySelectorAll('.custom-option')
 const calculateResult = document.querySelector('.calculate__result')
+const sumOfAll = calculateResult.querySelector('.calculate__total--sum')
 const accounting = document.querySelector('.calculate__accounting')
+const paymentTerminal = document.querySelector('.calculate__terminal')
 let totalCost = 0
 let costOfProducts = 0
 let ordersInMonth = 0
@@ -67,7 +70,7 @@ calculateInput.children[1].addEventListener('change', function () {
   ).firstElementChild.textContent = ordersInMonth
   costSum()
 })
-const packageOption = calculateInput.querySelectorAll('.custom-option')
+
 packageOption.forEach((element) => {
   element.addEventListener('click', function () {
     calculateResult
@@ -90,22 +93,38 @@ packageOption.forEach((element) => {
   })
 })
 
+function accountingChecked() {
+  accounting.classList.remove('hide')
+  accountingCost = 20
+}
+
+function accountingUnchecked() {
+  accounting.classList.add('hide')
+  accountingCost = 0
+}
+
 calculateInput.children[3].addEventListener('change', function (e) {
-  console.log(this.firstElementChild)
-  this.firstElementChild.checked
-    ? accounting.classList.remove('hide')
-    : accounting.classList.add('hide')
-  this.firstElementChild.checked ? (accountingCost = 20) : (accountingCost = 0)
+  this.firstElementChild.checked ? accountingChecked() : accountingUnchecked()
   calculateResult.querySelector(
     '.calculate__accounting--price'
   ).firstElementChild.textContent = accountingCost
   costSum()
 })
+
+function paymentTerminalChecked() {
+  paymentTerminal.classList.remove('hide')
+  terminalCost = 5
+}
+
+function paymentTerminalUnchecked() {
+  paymentTerminal.classList.add('hide')
+  terminalCost = 0
+}
+
 calculateInput.children[4].addEventListener('change', function () {
-  calculateResult.querySelector('.calculate__terminal').classList.toggle('hide')
-  this.firstElementChild.checked == true
-    ? (terminalCost = 5)
-    : (terminalCost = 0)
+  this.firstElementChild.checked
+    ? paymentTerminalChecked()
+    : paymentTerminalUnchecked()
   calculateResult.querySelector(
     '.calculate__terminal--price'
   ).firstElementChild.textContent = terminalCost
@@ -113,14 +132,11 @@ calculateInput.children[4].addEventListener('change', function () {
 })
 
 function costSum() {
-  // const calculateSum = calculateResult.querySelectorAll('.calculate__sum');
-
   totalCost =
     costOfProducts +
     ordersInMonth +
     selectedPackage +
     accountingCost +
     terminalCost
-  const sumOfAll = calculateResult.querySelector('.calculate__total--sum')
   return (sumOfAll.textContent = totalCost)
 }
