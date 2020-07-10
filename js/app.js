@@ -1,7 +1,8 @@
 window.addEventListener('DOMContentLoaded', (event) => {
   const menu = document.querySelector('.hamburger')
   const menuList = document.querySelector('.header__list')
-  const menuItems = document.querySelectorAll('.header__items a')
+  const menuItems = document.querySelectorAll('.header__items')
+  const menuItemsLink = document.querySelectorAll('.header__items a')
 
   function toggleMenu() {
     menu.classList.toggle('hamburger--active')
@@ -11,8 +12,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   menu.addEventListener('click', () => {
     toggleMenu()
   })
-  for (let i = 0; i < menuItems.length; i++) {
-    menuItems[i].addEventListener('click', () => {
+  for (let i = 0; i < menuItemsLink.length; i++) {
+    menuItemsLink[i].addEventListener('click', () => {
       toggleMenu()
     })
   }
@@ -24,4 +25,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
       menuList.classList.add('hide')
     }
   })
+
+  function onScroll(e) {
+    let scrollPos = window.pageYOffset
+    for (let i = 0; i < menuItemsLink.length; i++) {
+      let currLink = menuItemsLink[i]
+      let linkHref = currLink.getAttribute('href').split('#')
+      let refElement = document.getElementById(linkHref[1])
+      if (
+        refElement.offsetTop <= scrollPos &&
+        refElement.offsetTop + refElement.offsetHeight > scrollPos
+      ) {
+        currLink.parentElement.classList.add('active')
+      } else {
+        currLink.parentElement.classList.remove('active')
+      }
+    }
+  }
+  window.document.addEventListener('scroll', onScroll)
 })
