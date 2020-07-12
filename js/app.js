@@ -33,10 +33,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
       let linkHref = currLink.getAttribute('href').split('#')
       let refElement = document.getElementById(linkHref[1])
       if (
-        refElement.offsetTop <= scrollPos &&
-        refElement.offsetTop + refElement.offsetHeight > scrollPos
+        refElement.offsetTop <= scrollPos + 70 &&
+        refElement.offsetTop + refElement.offsetHeight > scrollPos + 70
       ) {
         currLink.parentElement.classList.add('active')
+      } else if (window.innerHeight + scrollPos >= document.body.offsetHeight) {
+        menuItemsLink[menuItemsLink.length - 1].parentElement.classList.add(
+          'active'
+        )
+        menuItemsLink[menuItemsLink.length - 2].parentElement.classList.remove(
+          'active'
+        )
       } else {
         currLink.parentElement.classList.remove('active')
       }
