@@ -686,6 +686,9 @@ input:valid {
   }
 }
 @media (min-width: 700px) and (max-width: 998px) {
+  .header {
+    width: 100%;
+  }
   .info__box--circle .info__img {
     height: 250px;
   }

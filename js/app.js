@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', (event) => {
   const menu = document.querySelector('.hamburger')
   const menuList = document.querySelector('.header__list')
-  const menuItems = document.querySelectorAll('.header__items')
+  // const menuItems = document.querySelectorAll('.header__items')
   const menuItemsLink = document.querySelectorAll('.header__items a')
 
   function toggleMenu() {
