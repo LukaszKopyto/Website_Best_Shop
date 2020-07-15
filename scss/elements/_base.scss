@@ -686,6 +686,9 @@ input:valid {
   }
 }
 @media (min-width: 700px) and (max-width: 998px) {
+  .header {
+    width: 100%;
+  }
   .info__box--circle .info__img {
     height: 250px;
   }
@@ -832,5 +835,8 @@ input:valid {
     padding: 29px 12px 23px 12px;
     cursor: pointer;
     font-weight: 600;
+  }
+  .header__nav {
+    background: red;
   }
 }
