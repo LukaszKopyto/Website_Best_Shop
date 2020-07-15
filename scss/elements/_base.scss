@@ -484,6 +484,8 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
+  height: 70px;
 }
 .form__label {
   font-family: $primary-font;
@@ -493,16 +495,33 @@ main {
   color: $main-color;
   text-transform: uppercase;
   letter-spacing: 3.28px;
-}
-.form__label[for='email'] {
-  margin-top: 42px;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  transition: 0.2s all;
+  cursor: text;
 }
 .form__input {
   border: 0;
   outline: 0;
   background: transparent;
   border-bottom: 1px solid #95989a;
-  height: 42px;
+  font-size: 14px;
+  height: 40px;
+}
+input:focus,
+input:valid {
+  border-bottom: 2px solid $main-color;
+}
+.form__input:focus ~ label,
+.form__input:valid ~ label {
+  font-size: 16px;
+  top: -24px;
+  color: $main-color;
+  position: absolute;
+}
+.form__input:invalid {
+  outline: 0;
 }
 .form__checkbox {
   display: flex;
