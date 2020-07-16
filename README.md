@@ -5,6 +5,7 @@
 ## Live demo
 
 [https://lukaszkopyto.github.io/Website_Best_Shop/](https://lukaszkopyto.github.io/Website_Best_Shop/)
+
 [https://lukaszkopyto.github.io/Website_Best_Shop/calculate.html](https://lukaszkopyto.github.io/Website_Best_Shop/calculate.html)
 
 ## Table of contents
@@ -18,11 +19,15 @@
 ## General info
 
 Responsive one-page website as part of the Coders Lab course.
+
 The second part of the workshop was to create a view that calculates the price based on the values from the fields: input, checkbox and select.
 
 ## Screenshots
 
+Website Best Shop - index.html
 ![Website Best Shop ](./assets/Web-Showcase-Project-Presentation.jpg)
+
+Pricining calculator - calculate.html
 ![Price calculator screenshot ](./assets/Calculator_screenshot.png)
 
 ## Technologies
