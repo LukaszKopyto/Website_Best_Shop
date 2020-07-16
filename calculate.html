@@ -1,77 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BestShop - Calculate how much you'll pay</title>
-  <link href="./css/reset.css" rel="stylesheet" />
-  <link href="./css/styles.css" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,800&display=swap&subset=latin-ext"
-    rel="stylesheet" />
-</head>
-<body>
-  <section class="calculate">
-    <div class="container">
-      <div class="calculate__title">Calculate how much you’ll pay</div>
-      <div class="calculate__form">
-        <div class="calculate__input--box">
-          <input type="number" min="0" name="Products" id="products-quantity" placeholder="Products quantity" class="calculate__input">
-          <input type="number" min="0" name="Orders" id="estimated__orders" placeholder="Estimated orders in month" class="calculate__input">
-              <div class="custom-select-wrapper">
-                <div class="custom-select calculate__input">
-                    <div class="custom-select__trigger"><span>Choose package</span>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="custom-options">
-                        <span class="custom-option selected" data-value="Basic">Basic</span>
-                        <span class="custom-option" data-value="Professional">Professional</span>
-                        <span class="custom-option" data-value="Premium">Premium</span>
-                    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BestShop - Calculate how much you'll pay</title>
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,800&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="calculate">
+      <div class="container">
+        <div class="calculate__title">Calculate how much you’ll pay</div>
+        <div class="calculate__form">
+          <div class="calculate__input--box">
+            <input
+              type="number"
+              min="0"
+              name="Products"
+              id="products-quantity"
+              placeholder="Products quantity"
+              class="calculate__input"
+            />
+            <input
+              type="number"
+              min="0"
+              name="Orders"
+              id="estimated__orders"
+              placeholder="Estimated orders in month"
+              class="calculate__input"
+            />
+            <div class="custom-select-wrapper">
+              <div class="custom-select calculate__input">
+                <div class="custom-select__trigger">
+                  <span>Choose package</span>
+                  <div class="arrow"></div>
                 </div>
+                <div class="custom-options">
+                  <span class="custom-option selected" data-value="Basic"
+                    >Basic</span
+                  >
+                  <span class="custom-option" data-value="Professional"
+                    >Professional</span
+                  >
+                  <span class="custom-option" data-value="Premium"
+                    >Premium</span
+                  >
+                </div>
+              </div>
             </div>
             <div class="calculate__checkbox">
-              <input class="checkbox__input" type="checkbox" name="check" required="required" aria-required="true" id="calculate__check--first">
-              <label for="calculate__check--first" class="checkbox__label--calculate">Accounting</label>
+              <input
+                class="checkbox__input"
+                type="checkbox"
+                name="check"
+                required="required"
+                aria-required="true"
+                id="calculate__check--first"
+              />
+              <label
+                for="calculate__check--first"
+                class="checkbox__label--calculate"
+                >Accounting</label
+              >
             </div>
             <div class="calculate__checkbox">
-            <input class="checkbox__input" type="checkbox" name="check" required="required" aria-required="true" id="calculate__check--second">
-            <label for="calculate__check--second" class="checkbox__label--calculate">Rental of a payment terminal</label>
+              <input
+                class="checkbox__input"
+                type="checkbox"
+                name="check"
+                required="required"
+                aria-required="true"
+                id="calculate__check--second"
+              />
+              <label
+                for="calculate__check--second"
+                class="checkbox__label--calculate"
+                >Rental of a payment terminal</label
+              >
+            </div>
           </div>
-        </div>
-        <div class="calculate__result">
-          <div class="calculate__product summary__box hide">
-            <div class="calculate__product--name">Products</div>
-            <div class="calculate__product--option"><span>0</span> * $0.5</div>
-            <div class="calculate__product--price">$<span class="calculate__sum"></span></div>
-          </div>
-          <div class="calculate__orders summary__box hide">
-            <div class="calculate__orders--name">Orders</div>
-            <div class="calculate__orders--option"><span>0</span> * $0.25</div>
-            <div class="calculate__orders--price">$<span class="calculate__sum"></span></div>
-          </div>
-          <div class="calculate__package summary__box hide">
-            <div class="calculate__package--name">Package</div>
-            <div class="calculate__package--option"></div>
-            <div class="calculate__package--price">$<span class="calculate__sum"></span></div>
-          </div>
-          <div class="calculate__accounting summary__box hide">
-            <div class="calculate__accounting--name">Accounting</div>
-            <div class="calculate__accounting--price">$<span class="calculate__sum"></span></div>
-          </div>
-          <div class="calculate__terminal summary__box hide">
-            <div class="calculate__terminal--name">Terminal</div>
-            <div class="calculate__terminal--price">$<span class="calculate__sum"></span></div>
-          </div>
-          <div class="calculate__total">
-            <div class="calculate__total--name">Total</div>
-            <div class="calculate__total--price">$<span class="calculate__total--sum"></span></div>
+          <div class="calculate__result">
+            <div class="calculate__product summary__box hide">
+              <div class="calculate__product--name">Products</div>
+              <div class="calculate__product--option">
+                <span>0</span> * $0.5
+              </div>
+              <div class="calculate__product--price">
+                $<span class="calculate__sum"></span>
+              </div>
+            </div>
+            <div class="calculate__orders summary__box hide">
+              <div class="calculate__orders--name">Orders</div>
+              <div class="calculate__orders--option">
+                <span>0</span> * $0.25
+              </div>
+              <div class="calculate__orders--price">
+                $<span class="calculate__sum"></span>
+              </div>
+            </div>
+            <div class="calculate__package summary__box hide">
+              <div class="calculate__package--name">Package</div>
+              <div class="calculate__package--option"></div>
+              <div class="calculate__package--price">
+                $<span class="calculate__sum"></span>
+              </div>
+            </div>
+            <div class="calculate__accounting summary__box hide">
+              <div class="calculate__accounting--name">Accounting</div>
+              <div class="calculate__accounting--price">
+                $<span class="calculate__sum"></span>
+              </div>
+            </div>
+            <div class="calculate__terminal summary__box hide">
+              <div class="calculate__terminal--name">Terminal</div>
+              <div class="calculate__terminal--price">
+                $<span class="calculate__sum"></span>
+              </div>
+            </div>
+            <div class="calculate__total">
+              <div class="calculate__total--name">Total</div>
+              <div class="calculate__total--price">
+                $<span class="calculate__total--sum"></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <script src="./js/app.js"></script>
-</body>
+    </section>
+    <script src="./js/appCalculator.js"></script>
+  </body>
 </html>
