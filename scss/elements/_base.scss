@@ -515,8 +515,8 @@ input:valid {
 }
 .form__input:focus ~ label,
 .form__input:valid ~ label {
-  font-size: 16px;
-  top: -24px;
+  font-size: 12px;
+  top: -20px;
   color: $main-color;
   position: absolute;
 }
@@ -758,7 +758,7 @@ input:valid {
   }
   .pricing__boxes--container {
     min-width: 100vw;
-    padding: 0 15px 50px;
+    padding: 0 30px 50px;
   }
   .pricing__box {
     width: 30%;
