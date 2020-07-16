@@ -50,12 +50,12 @@ body {
   z-index: 1;
   transition: 0.8s;
 }
-.hide {
-  display: none;
-}
 .hide__menu {
   visibility: hidden;
   opacity: 0;
+}
+.summary__box.hide {
+  display: none;
 }
 .header__items {
   padding: 14px 0;
