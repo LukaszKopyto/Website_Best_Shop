@@ -51,6 +51,9 @@ body {
   transition: 0.8s;
 }
 .hide {
+  display: none;
+}
+.hide__menu {
   visibility: hidden;
   opacity: 0;
 }

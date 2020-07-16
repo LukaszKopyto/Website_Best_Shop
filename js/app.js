@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   function toggleMenu() {
     menu.classList.toggle('hamburger--active')
-    menuList.classList.toggle('hide')
+    menuList.classList.toggle('hide__menu')
   }
 
   menu.addEventListener('click', () => {
@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   window.addEventListener('mouseup', (e) => {
     if (!menuList.contains(e.target) && !menu.contains(e.target)) {
       menu.classList.remove('hamburger--active')
-      menuList.classList.add('hide')
+      menuList.classList.add('hide__menu')
     }
   })
 
