@@ -20,7 +20,7 @@
 
 Responsive one-page website as part of the Coders Lab course.
 
-The second part of the workshop was to create a view that calculates the price based on the values from the fields: input, checkbox and select.
+The aim of the second part of the workshop was to create a view that calculates the price based on the values from the fields: input, checkbox and select.
 
 ## Screenshots
 
